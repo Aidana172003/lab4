@@ -6,13 +6,9 @@
   <p *ngIf="product.description">Description: {{ product.description }}</p>
   <img [src]="product.image" width="250px" />
   <p *ngIf="product.rating">Rating: {{ product.rating }}</p>
-  <button type="button">
-    <a
-      [href]="'https://telegram.me/share/url?url=' + product.link"
-      target="_blank"
-    ></a
-    >Share
-  </button>
+  <form action="https://telegram.me/share/url?url=" targer="_blank">
+    <button type="button">Share</button>
+  </form>
 </div>
 <div *ngFor="let product of products"></div>
 
